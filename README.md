@@ -1,6 +1,28 @@
 # Incubeta Data Engineering Screening Challenge
 ## BQML & Medallion Data Pipeline
 
+## Introduction
+
+I would like to thank the Incubeta team for giving me the opportunity to complete this screening challenge. I really appreciate the chance to work through the case study and showcase my data engineering skills, technical approach and the way I think about building data solutions.
+
+I have also taken the opportunity to go beyond the minimum requirements of the challenge and demonstrate how I would approach extending the solution towards a more production-oriented data pipeline.
+
+## Repository Structure
+
+The numbered folders are intentional. I used them to make the repository easy to navigate and to reflect the way the project is presented.
+
+The numbering keeps the most important parts of the screening challenge at the top, while also clearly separating the additional engineering work I added.
+
+- **01_sql** – Core SQL implementation required by the challenge
+- **02_proof** – Proof of execution and BQML evaluation
+- **03_doc** – Supporting project documentation
+- **04_ingestion** – Additional Python ingestion implementation
+- **05_Helper** – Reusable Python helper modules
+- **06_orchestration** – Cronicle and Airflow orchestration
+- **07_infrastructure** – Terraform infrastructure
+- **08_ETA_ipynb** – Exploratory data analysis
+
+
 ### Project Overview
 
 This project implements the Incubeta Data Engineering Screening Challenge using **Google BigQuery, BigQuery ML and a Medallion Architecture**.
