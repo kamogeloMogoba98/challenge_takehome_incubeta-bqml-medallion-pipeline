@@ -1,0 +1,43 @@
+
+## Design Trade-offs
+
+There were a few different ways I could have designed the orchestration for this project.
+
+### Option 1: VM + Python + Cronicle + Scheduled Queries
+
+The first option was to keep the Python ingestion script running on the VM and use [node.js](http://node.js) scheudlor  Cronicle to schedule it.
+
+The ingestion process would load the raw data into the Bronze layer, while BigQuery Scheduled Queries would handle the Silver and Gold transformations.
+
+I would run the ingestion script at 06:00 SAST and schedules 07:00 SAST AND 07:30 because sql queries normally run quick compared to load jobs 
+
+This option is relatively simple and cost-effective. Cronicle also gives me visibility into the Python job and can support alerts through mechanisms such as email or Slack.
+
+However, the main downside is that the processes are not properly task-dependent.
+
+For example, if the Python ingestion job fails, the Scheduled Queries could still run because they are operating independently. This could result in unnecessary compute and potentially cause downstream processes to run against incomplete data.
+
+### Option 2: Airflow / Cloud Composer
+
+The second option is to use Airflow to orchestrate the entire pipeline.
+
+In this approach, Airflow would handle the ingestion, Silver transformation and Gold transformation. Each task would have a dependency on the previous task.
+
+This is cleaner from an orchestration perspective because everything is managed under one service. It also gives me useful features such as task dependencies, backfilling, centralised logs and a visual representation of pipeline runs.
+
+The main downside is cost and complexity.
+
+Cloud Composer is considerably more expensive than simply running a Python script on a VM and using Scheduled Queries. It also comes with additional infrastructure and operational complexity because it is built around Kubernetes.
+
+There is also a design consideration around scalability. If the project eventually had 80 or more SQL transformations, I would need to think carefully about how to structure the DAGs rather than putting everything into one large DAG.
+
+### Overall Approach
+
+For this project, I wanted to demonstrate both approaches rather than simply choosing the most expensive option.
+
+The VM, Python and Cronicle approach is lightweight and works well for straightforward ingestion. Scheduled Queries are also perfectly capable of handling simple transformations.
+
+Airflow becomes more valuable when the pipeline starts becoming more complex and task dependencies, retries, backfilling, monitoring and orchestration become more important.
+
+The main design decision I made across the pipeline was therefore to keep the individual components relatively simple while introducing more advanced orchestration where it actually adds value.
+
