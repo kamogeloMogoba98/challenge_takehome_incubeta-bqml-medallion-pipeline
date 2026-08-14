@@ -135,7 +135,7 @@ This document takes the segmentation model beyond the technical implementation a
 
 It explores how customer behaviour and product preferences could be used to target customers with more relevant content, measure campaign engagement and ultimately connect the data engineering pipeline back to marketing outcomes.
 
-**[Read: Implementing the Case Study on the Segmentation Model](YOUR_GOOGLE_SHEET_LINK_HERE)**
+**[Read: Implementing the Case Study on the Segmentation Model](https://docs.google.com/document/d/1cVFRCrv1KT7dgPdbXkf9MIxN9cxGobw3gFLrP2OIJsk/edit?tab=t.0)**
 
 ---
 
