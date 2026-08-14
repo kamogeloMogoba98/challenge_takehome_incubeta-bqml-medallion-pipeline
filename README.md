@@ -63,7 +63,9 @@ The distinction is intentional: **BigQuery represents the core solution requeste
 
 ---
 
-## Architecture
+## Diagram 
+
+![daigram](ETL_daigram(2).png)
 
 ```text
                          Raw CSV
