@@ -65,7 +65,7 @@ The distinction is intentional: **BigQuery represents the core solution requeste
 
 ## Diagram 
 
-![daigram](ETL_diagram (2).png)
+![daigram](ETL_diagram.png)
 
 ```text
                          Raw CSV
