@@ -110,7 +110,9 @@ The orchestration implementation is available in [`05_orchestration`](./05_orche
 
 The Cronicle scheduling environment used for the ingestion process is also available for review via HTTPS. The access link is provided through the GitHub repository so the Incubeta team can view the scheduled ingestion jobs and their execution history.
 
-**[Access Cronicle via HTTPS](YOUR_CRONICLE_HTTPS_URL_HERE)**
+**[Access Cronicle via HTTPS](http://34.148.179.127/#Schedule)**
+
+The password and username is admin 
 
 ---
 
