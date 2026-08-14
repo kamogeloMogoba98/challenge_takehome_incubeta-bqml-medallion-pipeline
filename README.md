@@ -127,7 +127,7 @@ I have also included two supporting project write-ups that go deeper into the im
 
 This document explains my implementation from the initial GCP setup and Terraform infrastructure through to ingestion, transformation, BQML, orchestration and the design decisions I made along the way.
 
-**[Read: How I Completed This Project](YOUR_GOOGLE_SHEET_LINK_HERE)**
+**[Read: How I Completed This Project](https://docs.google.com/document/d/1gtlpnJ4GLTuG6rczlIHW7tyP2N1-aZkAu7gNBhtf8ps/edit?tab=t.0)**
 
 ### Case Study: Implementing the Customer Segmentation Model
 
