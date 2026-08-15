@@ -14,6 +14,11 @@
 -- can be picked up in the next run without creating duplicates. It also
 -- helps keep the query more efficient by avoiding unnecessary inserts.
 
+-- This script is designed for one time processing of the data.
+-- If scheduled, I would add a date range where clause so only the relevant partitions are scanned,
+-- based on the known range of late-arriving data. This would save compute and runtime.
+  --save from unnessary data being predicted 
+
 
 MERGE `retail_gold.analytics_customer_segments` AS target
 USING (
