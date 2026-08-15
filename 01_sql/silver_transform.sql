@@ -1,7 +1,10 @@
 #created by Kamogelo Mogoba 
----schedule to run daily at 08:00
----reason I choose merg instead insert cause I do not duplicate  and can update changed rows if meet condition and late arriving data
----shorter runtime and if data is ammended, if can be update within the next run and for late arriving data inclusion
+---Schedule to run daily at 08:00
+-- Reason for choosing merge instead of insert
+-- Merge prevents duplicate records and allows changed rows to be updated
+-- when they meet the required conditions. It also supports late arriving data.
+-- Benefits: shorter runtime, updates amended data during the next run,
+-- and includes late-arriving data.
 
 
 
@@ -17,8 +20,8 @@ date(purchase_date) as purchase_date,
 item_category, 
 case when is_returned is Null then False else
 is_returned end as is_returned,
---difference between signup_date and purchase_date
-DATE_DIFF(DATE(purchase_date), DATE(signup_date), DAY)as days_to_first_purchase
+--difference between signup_date and purchase_date taking into consideration the coalesce function
+DATE_DIFF(DATE(purchase_date), Date(COALESCE(signup_date, purchase_date)), DAY)as days_to_first_purchase
 from retail_bronze.raw_transactions
 ---write and reduce the rows that have amount let then 0
 WHERE CAST(amount AS FLOAT64) > 0
