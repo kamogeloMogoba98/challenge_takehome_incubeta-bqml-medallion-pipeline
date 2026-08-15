@@ -82,6 +82,8 @@ The Cronicle scheduling environment used for the ingestion process is also avail
 #Cronicle live here
 **[Access Cronicle via HTTPS](http://34.148.179.127/#Schedule)**
 
+![Overview_cronicle_1](Overview_cronicle_1.png)
+
 The password and username is admin 
 
 ---
