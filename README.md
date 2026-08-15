@@ -111,39 +111,64 @@ It explores how customer behaviour and product preferences could be used to targ
 ## Repository Structure
 
 ```text
-incubeta-data-engineering-challenge/
+GCP_DATA_INFRASTRUCTURE/
 │
 ├── README.md
+├── .gitignore
+├── ETL_daigram.png
+├── option_one.png
+├── Option2.png
+├── Overview_cronicle_1.png
 │
 ├── 01_sql/
-│   ├── silver_transform.sql
 │   ├── gold_model_training.sql
-│   └── gold_prediction.sql
+│   ├── gold_prediction.sql
+│   └── silver_transform.sql
 │
 ├── 02_proof/
-│   ├── bronze/
-│   ├── silver/
-│   ├── gold/
-│   └── model_evaluation/
+│   ├── amount.png
+│   ├── gold_table.png
+│   └── segmentation_diagram.png
 │
-├── 03_ingestion/
-│   └── ingest_transactions.py
+├── 03_doc/
+│   └── orchestration_discussion.readme
 │
-├── 04_helpers/
+├── 04_ingestion/
+│   └── retail_data_ingestion.py
+│
+├── 05_Helper/
 │   ├── bigquery.py
-│   ├── gcs.py
 │   └── logger.py
 │
-├── 05_orchestration/
+├── 06_orchestration/
+│   ├── readme.md
+│   │
 │   ├── airflow/
+│   │   ├── Bronze_to_silver_dag.py
+│   │   ├── Dag_run.png
+│   │   ├── image.png
+│   │   ├── Overview.png
+│   │   └── readme.md
+│   │
 │   └── cronicle/
+│       ├── job_history.png
+│       ├── Overview_cronicle.png
+│       ├── read.me
+│       ├── README.md
+│       └── scheduled_events.png
 │
-├── 06_infrastructure/
-│   └── terraform/
+├── 07_infrastructure/
+│   ├── environment/
+│   │   ├── main.tf
+│   │   └── variables.tf
+│   │
+│   └── modules/
+│       ├── bigquery/
+│       ├── compute/
+│       └── storage/
 │
-└── 07_docs/
-    ├── design_decisions.md
-    └── ai_usage.md
+└── 08_ETA_ipynb/
+    └── explore_data_analysis.ipynb
 ```
 
 ---
