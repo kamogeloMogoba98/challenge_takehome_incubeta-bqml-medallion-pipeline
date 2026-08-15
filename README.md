@@ -162,4 +162,4 @@ I remained responsible for the implementation, testing and validation of the sol
 
 **Orchestration:** Cronicle, Airflow
 
-**Architecture:** Medallion Architecture
+**Daigrams:** draw.io 
