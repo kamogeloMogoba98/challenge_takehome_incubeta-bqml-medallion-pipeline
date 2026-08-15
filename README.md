@@ -106,7 +106,7 @@ For a simple production setup, I would run the Python ingestion script on the VM
 
 This is lightweight and cost-effective, but the jobs are not task-dependent. For a more mature production environment, I would use **Cloud Composer/Airflow** to orchestrate the pipeline, allowing task dependencies, retries, backfilling, monitoring and centralised logging.
 
-The orchestration implementation is available in [`05_orchestration`](./06_orchestration).
+The orchestration implementation is available in [`06_orchestration`](./06_orchestration).
 
 ### Cronicle Access
 
