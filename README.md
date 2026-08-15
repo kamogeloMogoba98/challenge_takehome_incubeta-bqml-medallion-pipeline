@@ -65,7 +65,7 @@ The distinction is intentional: **BigQuery represents the core solution requeste
 
 ## Diagram 
 
-![daigram](ETL_daigram.png)
+![daigram](latest_ETL_daigram.png)
 
 ## Production-Oriented Orchestration
 
