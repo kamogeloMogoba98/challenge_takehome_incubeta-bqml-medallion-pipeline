@@ -5,6 +5,9 @@
 -- when they meet the required conditions. It also supports late arriving data.
 -- Benefits: shorter runtime, updates amended data during the next run,
 -- and includes late-arriving data.
+ -- This script is designed for one-time processing of the data.
+-- If scheduled, I would add a date range so only the relevant partitions are scanned,
+-- based on the known range of late-arriving data. This would save compute and runtime.
 
 
 
