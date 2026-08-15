@@ -192,7 +192,7 @@ I remained responsible for the implementation, testing and validation of the sol
 ---
 ## Next Steps
 
-If I had more time, I would have liked to take this project further by showing how the SQL and Python scripts could be properly version controlled through a CI/CD process.
+If I had more time, I would have liked to take this project further by showing how the SQL and Python scripts could be version controlled through a CI/CD process.
 
 For example, changes to Scheduled Queries could require a Pull Request before being promoted to production. A Bash validation script could also compare the Scheduled Queries stored in the Git production repository against the versions currently running in BigQuery. If a difference is detected, it could raise a flag so that Git remains the source of truth and the production repository stays up to date.
 
