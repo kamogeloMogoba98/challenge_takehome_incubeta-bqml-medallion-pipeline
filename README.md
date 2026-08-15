@@ -22,6 +22,7 @@ The numbering keeps the most important parts of the screening challenge at the t
 - **07_infrastructure** – Terraform infrastructure
 - **08_ETA_ipynb** – Exploratory data analysis
 
+---
   ```text
 GCP_DATA_INFRASTRUCTURE/
 │
