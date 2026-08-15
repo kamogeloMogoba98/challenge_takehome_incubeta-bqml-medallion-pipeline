@@ -11,3 +11,8 @@ For this project, the ingestion script is scheduled to run at **06:00 SAST**. On
 I used Cronicle as a lightweight scheduling option for the ingestion process. It provides visibility into scheduled jobs, execution history and job status, while keeping the infrastructure relatively simple and cost-effective.
 
 It also provides options for notifications and alerts, which would be useful in a production environment for monitoring failed ingestion jobs.
+
+
+![daigram](Overview_cronicle.png)
+![daigram](job_history.png)
+![daigram](scheduled_events.png)
