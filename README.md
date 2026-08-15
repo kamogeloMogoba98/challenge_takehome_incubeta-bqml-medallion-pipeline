@@ -23,64 +23,8 @@ The numbering keeps the most important parts of the screening challenge at the t
 - **08_ETA_ipynb** – Exploratory data analysis
 
 ---
-  ```text
-GCP_DATA_INFRASTRUCTURE/
-│
-├── README.md
-├── .gitignore
-├── ETL_daigram.png
-├── Overview_cronicle_1.png
-│
-├── 01_sql/
-│   ├── gold_model_training.sql
-│   ├── gold_prediction.sql
-│   └── silver_transform.sql
-│
-├── 02_proof/
-│   ├── amount.png
-│   ├── gold_table.png
-│   └── segmentation_diagram.png
-│
-├── 03_doc/
-│   └── orchestration_discussion.readme
-│
-├── 04_ingestion/
-│   └── retail_data_ingestion.py
-│
-├── 05_Helper/
-│   ├── bigquery.py
-│   └── logger.py
-│
-├── 06_orchestration/
-│   ├── readme.md
-│   │
-│   ├── airflow/
-│   │   ├── Bronze_to_silver_dag.py
-│   │   ├── Dag_run.png
-│   │   ├── image.png
-│   │   ├── Overview.png
-│   │   └── readme.md
-│   │
-│   └── cronicle/
-│       ├── job_history.png
-│       ├── Overview_cronicle.png
-│       ├── read.me
-│       ├── README.md
-│       └── scheduled_events.png
-│
-├── 07_infrastructure/
-│   ├── environment/
-│   │   ├── main.tf
-│   │   └── variables.tf
-│   │
-│   └── modules/
-│       ├── bigquery/
-│       ├── compute/
-│       └── storage/
-│
-└── 08_ETA_ipynb/
-    └── explore_data_analysis.ipynb
-```
+
+
 
 ### Project Overview
 
