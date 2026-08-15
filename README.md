@@ -174,7 +174,7 @@ GCP_DATA_INFRASTRUCTURE/
 
 ## AI Usage
 
-AI tools were used as an engineering assistant during the project to help with research, troubleshooting, architecture discussions and documentation.
+AI tools were used as an engineering assistant during the project to help with research, troubleshooting, architecture discussions and documentation as as well as troubleshooting Ttools like VM permissions, Cloud Composer, Terraform, SSH and Python errors.
 
 I remained responsible for the implementation, testing and validation of the solution and used AI as a supporting tool rather than relying on it to complete the project independently.
 
