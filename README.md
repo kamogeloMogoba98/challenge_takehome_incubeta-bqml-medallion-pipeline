@@ -172,7 +172,7 @@ It explores how customer behaviour and product preferences could be used to targ
 
 ---
 
-## Repository Structure
+## Structure
 
 ```text
 GCP_DATA_INFRASTRUCTURE/
