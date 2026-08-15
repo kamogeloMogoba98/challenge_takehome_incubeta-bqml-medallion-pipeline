@@ -1,9 +1,12 @@
-----#Train the K-Means model using 6 clusters which I found using the elbow method that is in
----- my Notebook based strictly on amount and item_category
+-- #Train the K-Means model using 6 clusters, which I selected using the
+-- elbow method shown in my notebook. The model is based on amount and
+-- item_category only.
+
+
 CREATE OR REPLACE MODEL retail_gold.customer_segmentation_model
 OPTIONS(
     model_type = 'kmeans',
-    num_clusters = 6,  #elbow method from Sum of squared Error
+    num_clusters = 6,  ---6 clusters selected using the elbow method (SSE)
     standardize_features = TRUE
 ) AS 
 SELECT 
