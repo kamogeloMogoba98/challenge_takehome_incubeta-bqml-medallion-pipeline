@@ -5,6 +5,8 @@ I considered two orchestration approaches for this project.
 
 ### Option 1: VM + Python + Cronicle + Scheduled Queries
 
+![daigram](Option_one.png)
+
 The Python ingestion script runs on the VM and is scheduled using Cronicle at **06:00 SAST**. BigQuery Scheduled Queries then handle the Silver and Gold transformations at **07:00 and 07:30 SAST**.
 
 **Pros:**
@@ -17,6 +19,8 @@ The Python ingestion script runs on the VM and is scheduled using Cronicle at **
 - A downstream query could run even if ingestion fails
 
 ### Option 2: Airflow / Cloud Composer
+
+![daigram](Option2.png)
 
 Airflow can manage the entire pipeline with dependencies between ingestion, Silver and Gold tasks.
 
