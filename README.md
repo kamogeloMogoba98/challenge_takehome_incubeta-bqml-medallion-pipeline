@@ -116,8 +116,6 @@ GCP_DATA_INFRASTRUCTURE/
 ├── README.md
 ├── .gitignore
 ├── ETL_daigram.png
-├── option_one.png
-├── Option2.png
 ├── Overview_cronicle_1.png
 │
 ├── 01_sql/
