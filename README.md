@@ -67,39 +67,6 @@ The distinction is intentional: **BigQuery represents the core solution requeste
 
 ![daigram](ETL_daigram.png)
 
-```text
-                         Raw CSV
-                            │
-                            ▼
-                     GCP VM / Python
-                            │
-                            ▼
-                    ┌───────────────┐
-                    │    Bronze     │
-                    │ raw data      │
-                    └───────┬───────┘
-                            │
-                            ▼
-                    ┌───────────────┐
-                    │    Silver     │
-                    │ cleaned data  │
-                    └───────┬───────┘
-                            │
-                            ▼
-                    ┌───────────────┐
-                    │   BigQuery ML │
-                    │   K-means     │
-                    └───────┬───────┘
-                            │
-                            ▼
-                    ┌───────────────┐
-                    │     Gold      │
-                    │ segmentation  │
-                    └───────────────┘
-```
-
----
-
 ## Production-Oriented Orchestration
 
 For a simple production setup, I would run the Python ingestion script on the VM using **Cronicle**, scheduled for 06:00 SAST, followed by BigQuery Scheduled Queries for the Silver transformation at 07:00 and Gold transformation at 07:30.
