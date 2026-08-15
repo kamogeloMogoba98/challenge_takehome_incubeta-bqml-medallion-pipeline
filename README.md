@@ -75,7 +75,7 @@ This approach is lightweight and cost-effective, but the jobs are not task-depen
 
 #Query Optimisation
 
-As the pipeline moves from a one time process to a scheduled production workload, I would also optimise the SQL to take advantage of **partitioned tables**. Rather than scanning the entire base table on every run, I would define a lookback window based on the expected range of **late-arriving data**. The base table only looks at the last 30 days This would reduce unnecessary data scanned, query costs and runtime while still accounting for late-arriving records.
+As the pipeline moves from a one time process to a scheduled production workload, I would also optimise the SQL to take advantage of **partitioned tables**. Rather than scanning the entire base table on every run, I would define a lookback window based on the expected range of **late arriving data**. The base table only looks at the last 30 days This would reduce unnecessary data scanned, query costs and runtime while still accounting for late-arriving records.
 
 The orchestration implementation is available in [`06_orchestration`](./06_orchestration).
 
