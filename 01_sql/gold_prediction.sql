@@ -3,13 +3,12 @@
 -- Generate predictions
 -- i changed the CENTRIOD_ID to cluster_id for easier understanding.
 ---including the unique transaction_id so there are less chances of duplication each cluster maps to own row
--- and we reduce the chances of creating duplicates.
---
+
 -- I used merge instead of insert because it lets me handle both new and
 -- existing transactions. If a transaction already exists but the data has
 -- changed, it can be updated on the next run. If it's a new transaction,
 -- it will simply be inserted.
---
+
 -- This also helps with late arriving data, since any new or updated records
 -- can be picked up in the next run without creating duplicates. It also
 -- helps keep the query more efficient by avoiding unnecessary inserts.
