@@ -1,12 +1,13 @@
 #created by Kamogelo Mogoba 
 ---Schedule to run daily at 08:00
+ --UPPER(TRIM(item_category)) --makes sure values come in one standardized way SPORTS instead if Sports or sports 
 -- Reason for choosing merge instead of insert
 -- Merge prevents duplicate records and allows changed rows to be updated
 -- when they meet the required conditions. It also supports late arriving data.
 -- Benefits: shorter runtime, updates amended data during the next run,
--- and includes late-arriving data.
- -- This script is designed for one-time processing of the data.
--- If scheduled, I would add a date range so only the relevant partitions are scanned,
+-- and includes late arriving data.
+ -- This script is designed for one time processing of the data.
+-- If scheduled, I would add a date range so only the relevant partitions are scanned and also a processed_at(timestamp) column to know when each batched data arrived ,
 -- based on the known range of late-arriving data. This would save compute and runtime.
 
 
@@ -14,20 +15,19 @@
 MERGE `project-5ef0b845-cbc9-4786-858.retail_silver.cleaned_transactions`  AS target
 
 using (
-
 select transaction_id,
 customer_id,
 date(COALESCE(signup_date, purchase_date)) AS signup_date,
 date(purchase_date) as purchase_date,
  amount,
-item_category, 
+ UPPER(TRIM(item_category)) AS item_category, --standardized records
 case when is_returned is Null then False else
 is_returned end as is_returned,
 --difference between signup_date and purchase_date taking into consideration the coalesce function
 DATE_DIFF(DATE(purchase_date), Date(COALESCE(signup_date, purchase_date)), DAY)as days_to_first_purchase
 from retail_bronze.raw_transactions
 ---write and reduce the rows that have amount let then 0
-WHERE CAST(amount AS FLOAT64) > 0
+WHERE CAST(amount AS FLOAT64) > 0 and DATE(purchase_date) >= DATE(COALESCE(signup_date, purchase_date))---so that only records where purchase date are bigger the signup_date 
 group by 1,2,3,4 ,5,6,7,8
 )AS source
 ON target.transaction_id = source.transaction_id
